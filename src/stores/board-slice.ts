@@ -1,4 +1,5 @@
 import { StateCreator } from 'zustand';
+import { produce } from 'immer';
 import { BoardRecord } from '@/commonTypes/Board';
 import { Store } from './../providers/StoreProvider';
 import { TileRecord } from '@/commonTypes/Tile';
@@ -86,25 +87,16 @@ export const createBoardSlice: StateCreator<
     generatedPicto?: TileRecord['generatedPicto'],
   ) => {
     set(
-      (state) => {
-        if (!state.board) {
-          return state;
-        }
+      produce((state: BoardSlice) => {
+        if (!state.board) return;
 
-        const nextTiles = state.board.tiles.map((tile) =>
-          tile.id === tileId
-            ? {
-                ...tile,
-                image: image,
-                generatedPicto: generatedPicto ?? tile.generatedPicto,
-              }
-            : tile,
-        );
-        return {
-          board: { ...state.board, tiles: nextTiles },
-          isOutdated: true,
-        };
-      },
+        const tile = state.board.tiles.find((t) => t.id === tileId);
+        if (tile) {
+          tile.image = image;
+          tile.generatedPicto = generatedPicto ?? tile.generatedPicto;
+        }
+        state.isOutdated = true;
+      }),
       false,
       {
         type: 'Board/updateTileImage',
