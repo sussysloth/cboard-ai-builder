@@ -7,7 +7,7 @@ import { BoardRecord } from '@/commonTypes/Board';
 import { getServerSession } from 'next-auth/next';
 import authConfig from '@/lib/next-auth/config';
 import { create as savePrompt } from '@/db/services/Prompt/service';
-import { revalidateTag } from 'next/cache';
+import { revalidatePath } from 'next/cache';
 import { getErrorMessage } from '@/common/common';
 
 const apiKey = process.env.AZURE_OPENAI_API_KEY;
@@ -105,8 +105,10 @@ export async function submit(
         throw new Error('No suggestions found');
       }
 
-      const author = session.user?.name ? session.user.name : '';
-      const email = session.user?.email ? session.user.email : '';
+      const author = session.cboard_user?.name ? session.cboard_user.name : '';
+      const email = session.cboard_user?.email
+        ? session.cboard_user?.email
+        : '';
 
       const generatedBoard = await toCboardAdapter({
         suggestions,
@@ -131,7 +133,8 @@ export async function submit(
 
       if (savedPrompt) generatedBoard.promptId = savedPrompt._id.toString();
 
-      revalidateTag('promptHistory');
+      // revalidateTag('promptHistory');
+      revalidatePath('/');
 
       return {
         board: generatedBoard,
