@@ -23,7 +23,7 @@
     "@types/moment": "^2.13.0",
     "@types/nanoid": "^3.0.0",
     "bufferutil": "^4.0.8",
-    "cboard-ai-engine": "^1.6.0",
+    "cboard-ai-engine": "^1.7.0",
     "deepmerge": "^4.3.1",
     "embla-carousel-react": "^8.0.2",
     "immer": "^10.1.1",
