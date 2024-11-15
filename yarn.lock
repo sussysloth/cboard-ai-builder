@@ -1339,10 +1339,10 @@ caniuse-lite@^1.0.30001579:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001666.tgz#112d77e80f1762f62a1b71ba92164e0cb3f3dd13"
   integrity sha512-gD14ICmoV5ZZM1OdzPWmpx+q4GyefaK06zi8hmfHV5xe4/2nOQX3+Dw5o+fSqOws2xVwL9j+anOPFwHzdEdV4g==
 
-cboard-ai-engine@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/cboard-ai-engine/-/cboard-ai-engine-1.6.0.tgz#8f3449f212bf58c1a09df4024b80005fad13ad65"
-  integrity sha512-CUdQwt2Tt/A2jZtnPvAmvyntp1Wt4XVtVmjk8l4PfD7K2Vk81gj6hqryLudIkLdBoyTME9voTg4oXGF79alzVQ==
+cboard-ai-engine@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/cboard-ai-engine/-/cboard-ai-engine-1.7.0.tgz#0cdbe315559b5ffa64ceca1061aacc4c6eb8b296"
+  integrity sha512-3kADUKXzyLMlFralhEtBgoowCJC1v0JVW3ww1W2XpaJkiUPJeeYpoOu/ZCGLKuOEO6zOlErQPwPlr2dGE0Doaw==
   dependencies:
     "@azure-rest/ai-content-safety" "^1.0.0"
     axios "^1.6.2"
