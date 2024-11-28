@@ -4,12 +4,12 @@ const leoBaseUrl: string = 'https://cloud.leonardo.ai/api/rest/v1/';
 
 export async function POST(req: Request) {
   const { description } = await req.json();
-  const basePrompt =
-    'Create a simple and clear pictogram of ' +
-    description +
-    ' in the style of ARASAAC for AAC use. ' +
-    description +
-    ' should be represented with basic shapes and minimal details, using bold lines and solid colors to ensure easy recognition and clarity.';
+  // const basePrompt =
+  //   'Create a simple and clear pictogram of ' +
+  //   description +
+  //   ' in the style of ARASAAC for AAC use. ' +
+  //   description +
+  //   ' should be represented with basic shapes and minimal details, using bold lines and solid colors to ensure easy recognition and clarity.';
 
   const myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
@@ -17,19 +17,15 @@ export async function POST(req: Request) {
 
   // Imagine image
   const generationsBody: string = JSON.stringify({
-    prompt: basePrompt,
-    alchemy: false,
+    prompt: description,
+    modelId: '6b645e3a-d64f-4341-a6d8-7a3690fbf042', //Leonardo Phoenix
+    contrast: 4,
     num_images: 2,
-    width: 1024,
-    height: 768,
-    modelId: '2067ae52-33fd-4a82-bb92-c2c55e7d2786', //"name": "AlbedoBase XL",
-    transparency: 'foreground_only',
-    elements: [
-      {
-        akUUID: 'ec024a37-6fab-41ba-bc03-ab29ae0b9b5a', //Simple Icons
-        weight: 0.7,
-      },
-    ],
+    width: 896,
+    height: 896,
+    alchemy: false,
+    styleUUID: '1fbb6a68-9319-44d2-8d56-2957ca0ece6a', //Graphic design vector
+    enhancePrompt: false,
   });
   try {
     const response = await fetch(leoBaseUrl + 'generations', {
