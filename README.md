@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cboard AI builder
+
+The Cboard AI Builder is an augmentative and alternative communication (AAC) board generator designed to streamline the creation process for speech therapists or caregivers. It aims to reduce the time required to create specific AAC boards and provide a preliminary draft quickly.
+Once the board is created, it can be conveniently exported for use within the [Cboard App](https://app.cboard.io/).
+
+We're using Discord to collaborate, join us at: https://discord.gg/TEH8uxh
+
+# How it Works
+
+The process of using Cboard AI Builder starts with users providing the theme of the board and defining the grid dimensions. This information guides the generation of a comprehensive board layout, including labels and corresponding pictograms for each tile. The system sources pictograms from a database of images known as the Global Symbols bank. If a suitable image is not found, the AI autonomously generates a new pictogram tailored to the specific label. This seamless process simplifies board creation, providing efficiency and customization.
 
 ## Getting Started
 
-First, run the development server:
+First, install the project dependencies and run the development server:
 
 ```bash
-npm run dev
-# or
+yarn install
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/board](http://localhost:3000/board) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The page auto-updates as you edit any file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This is a [Next.js v14](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Learn More
+# Contributors
 
-To learn more about Next.js, take a look at the following resources:
+## Developers
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For the translations, we are currently using [Next-intl](https://next-intl-docs.vercel.app/). To add new messages to the project, simply add them to the `en-US.json` file.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### State management
 
-## Deploy on Vercel
+To manage state, we use[Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) following the guidelines provided in [this Article](https://docs.pmnd.rs/zustand/guides/nextjs).
+The main store is divided into smaller individual stores using [Zustand Slices Pattern](https://docs.pmnd.rs/zustand/guides/slices-pattern) to achieve modularity.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Please consider these recommendations:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Avoid Global Stores: The store should not be shared across requests and, therefore, must not be defined as a global variable. It is recommended to create a store for each request to ensure isolation and prevent unintended data sharing.
+- React Server Components and Store Interaction: React Server Components (RSCs) should neither read from nor write to the store. RSCs are not designed to use hooks or context, as they are intended to be stateless. Interacting with a global store from an RSC violates the architectural principles of Next.js.

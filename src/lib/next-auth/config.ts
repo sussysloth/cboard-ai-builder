@@ -7,6 +7,7 @@ import { oauthLogin, credentialsLogin } from '@/lib/cboard-api/auth';
 import { User } from '../cboard-api/types';
 import { CboardUser, PICK_KEYS } from './types';
 import pick from 'lodash.pick';
+import { getErrorMessage } from '../../common/common';
 const providers = [];
 
 if (process.env.GOOGLE_APP_ID && process.env.GOOGLE_APP_SECRET) {
@@ -64,6 +65,10 @@ function omitUserPropsForSession(user: User): CboardUser {
 }
 
 export default {
+  pages: {
+    signIn: '/signin',
+    error: '/signin',
+  },
   callbacks: {
     async session({ session, token }) {
       // Persisting cboard API user data on backend too
@@ -96,10 +101,9 @@ export default {
         try {
           const user = await credentialsLogin(credentials);
           return user;
-        } catch (e) {
-          // TODO: send error message to client, you can throw an exception and the message will be sent to the client
-          console.error(e);
-          throw e;
+        } catch (error) {
+          console.error(getErrorMessage(error));
+          throw error;
         }
       },
     }),

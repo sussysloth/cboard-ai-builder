@@ -1,0 +1,103 @@
+{
+  "Dashboard": {
+    "closeSidebar": "Cerrar barra lateral",
+    "openSidebar": "Abrir barra lateral",
+    "createNewBoard": "Crear un nuevo tablero",
+    "newBoard": "Nuevo tablero"
+  },
+  "History": {
+    "title": "Historial"
+  },
+  "Navbar": {
+    "cboard": "Cboard",
+    "builder": "Constructor"
+  },
+  "PromptForm": {
+    "rows": "Filas",
+    "columns": "Columnas",
+    "colorScheme": "Esquema de colores",
+    "prompt": "Crea un tablero sobre:",
+    "useAiPictograms": "Usar pictogramas de IA",
+    "newBoard": "Nuevo tablero",
+    "newAACBoard": "Nuevo tablero de CAA",
+    "submitText": "Crear"
+  },
+  "Board": {
+    "InitialContent": {
+      "ai": "IA",
+      "createANewBoard": "Crear un nuevo <b><br></br>Tablero de CAA</b>",
+      "examples": "Ejemplos",
+      "promptExample1": "Partes del cuerpo",
+      "promptExample2": "Animales de la selva",
+      "promptExample3": "Comida italiana",
+      "promptExample4": "Acciones comunes",
+      "promptExample5": "Mis estados de ánimo",
+      "promptExample6": "Actividades de higiene"
+    },
+    "BoardContainer": {
+      "exportToCboard": "Exportar a Cboard"
+    },
+    "TileEditor": {
+      "TileEditorDialogActions": {
+        "saveChanges": "Guardar cambios"
+      },
+      "MorePictosButtons": {
+        "search": "Buscar",
+        "generate": "Generar",
+        "searchAccessibility": "Buscar pictogramas",
+        "generateAccessibility": "Generar pictogramas"
+      },
+      "PictogramGeneratorFormDialog": {
+        "title": "Utilice Pictonizer para generar pictogramas",
+        "subtitle": "Generar pictogramas para",
+        "cancelButton": "CANCELAR",
+        "generateButton": "GENERAR",
+        "generatingPictogramsTo": "Generando pictogramas para:"
+      },
+      "PictogramSearcher": {
+        "pictogramNotFound": "Pictograma no encontrado",
+        "error": "Error",
+        "writeKeywordToSearch": "Escribe una palabra clave para buscar",
+        "trySearchingWithAnotherKeywordOrGenerateIt": "Intente buscar con otra palabra clave o genere con nuestro generador de pictogramas.",
+        "couldNotFetchPictograms": "No pudimos conseguir los pictogramas. Por favor, inténtelo de nuevo más tarde.",
+        "searchPictogramUsingTextField": "Buscar un pictograma usando el campo de texto en la parte superior"
+      }
+    }
+  },
+  "SavedData": {
+    "savedBoards": "Tableros guardados",
+    "history": "Historial"
+  },
+  "SignIn": {
+    "cboard": "Cboard",
+    "builder": "Constructor",
+    "sloganTitle": "Rápido e inteligente",
+    "sloganSubtitle": "Crea tableros con solo escribir lo que necesitas.",
+    "ai": "IA",
+    "errorMessage": "Algo salió mal durante el inicio de sesión",
+    "hello": "¡Hola!",
+    "welcome": "Bienvenido al creador de tableros de CAA",
+    "loginButton": "INICIAR SESIÓN",
+    "signUpButton": "REGISTRARSE",
+    "signInWith": "Iniciar sesión con {provider}",
+    "privacyPolicy": "Política de privacidad",
+    "terms": "Términos",
+    "LoginDialog": {
+      "title": "Iniciar sesión",
+      "email": "Email",
+      "password": "Contraseña",
+      "loginButton": "INICIAR SESIÓN",
+      "cancelButton": "CANCELAR",
+      "forgotPassword": "¿OLVIDÓ SU CONTRASEÑA?",
+      "errorMessage": "Correo electrónico o contraseña incorrectos"
+    }
+  },
+  "Settings": {
+    "title": "Configuración",
+    "user": "Usuario",
+    "application": "Aplicación",
+    "language": "Idioma",
+    "signOut": "Cerrar sesión",
+    "theme": "Tema"
+  }
+}

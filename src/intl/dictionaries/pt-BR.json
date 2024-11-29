@@ -1,8 +1,102 @@
 {
   "Dashboard": {
-    "menu": "Sua mai e o menu"
+    "closeSidebar": "Fechar barra lateral",
+    "openSidebar": "Abrir barra lateral",
+    "newBoard": "Novas placas"
   },
   "History": {
     "title": "História"
+  },
+  "Navbar": {
+    "cboard": "CBoard",
+    "builder": "Construtor"
+  },
+  "PromptForm": {
+    "rows": "Linhas",
+    "columns": "Colunas",
+    "colorScheme": "Esquema de cores",
+    "prompt": "Crie um quadro sobre:",
+    "useAiPictograms": "Use pictogramas de IA",
+    "newBoard": "Nova diretoria",
+    "newAACBoard": "Nova prancha de CAA",
+    "submitText": "Criar"
+  },
+  "Board": {
+    "InitialContent": {
+      "ai": "IA",
+      "createANewBoard": "Crie uma nova<b><br></br>prancha de CAA</b>",
+      "examples": "Exemplos",
+      "promptExample1": "Partes do corpo",
+      "promptExample2": "Animais da selva",
+      "promptExample3": "Comida italiana",
+      "promptExample4": "Acções comuns",
+      "promptExample5": "Meus humores",
+      "promptExample6": "Atividades de higiene"
+    },
+    "BoardContainer": {
+      "exportToCboard": "Exportar para Cboard"
+    },
+    "TileEditor": {
+      "TileEditorDialogActions": {
+        "saveChanges": "Salvar alterações"
+      },
+      "MorePictosButtons": {
+        "search": "Procurar",
+        "generate": "Gerar",
+        "searchAccessibility": "Pesquisar pictogramas",
+        "generateAccessibility": "Gerar pictogramas"
+      },
+      "PictogramGeneratorFormDialog": {
+        "title": "Use o Pictonizer para gerar pictogramas",
+        "subtitle": "Gere pictogramas para",
+        "cancelButton": "CANCELAR",
+        "generateButton": "GERAR",
+        "generatingPictogramsTo": "Gerando 4 pictogramas para:"
+      },
+      "PictogramSearcher": {
+        "pictogramNotFound": "Pictograma não encontrado",
+        "error": "Erro",
+        "writeKeywordToSearch": "Escreva uma palavra-chave para pesquisar",
+        "trySearchingWithAnotherKeywordOrGenerateIt": "Tente pesquisar com outra palavra-chave ou gere-a com nosso gerador de pictogramas.",
+        "couldNotFetchPictograms": "Não conseguimos buscar os pictogramas. Por favor, tente novamente mais tarde.",
+        "searchPictogramUsingTextField": "Pesquise um pictograma usando o campo de texto na parte superior"
+      }
+    }
+  },
+  "SavedData": {
+    "savedBoards": "Quadros salvos",
+    "history": "História"
+  },
+  "SignIn": {
+    "cboard": "CBoard",
+    "builder": "Construtor",
+    "sloganTitle": "Rápido e inteligente",
+    "sloganSubtitle": "Crie quadros de ladrilhos apenas digitando o que você precisa.",
+    "ai": "IA",
+    "errorMessage": "Algo deu errado durante o login",
+    "hello": "Olá!",
+    "welcome": "Bem-vindo ao Communication Board Builder",
+    "loginButton": "LOGIN",
+    "signUpButton": "INSCRIÇÃO",
+    "signInWith": "Entrar com {provider}",
+    "privacyPolicy": "Política de privacidade",
+    "terms": "Termos",
+    "LoginDialog": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Senha",
+      "loginButton": "LOGIN",
+      "cancelButton": "CANCELAR",
+      "forgotPassword": "ESQUECEU A SENHA?",
+      "errorMessage": "E-mail ou senha incorretos"
+    }
+  },
+  "Settings": {
+    "title": "Configurações",
+    "user": "Utilizador",
+    "application": "Aplicação",
+    "language": "Idioma",
+    "signOut": "Sair",
+    "theme": "Tema"
   }
 }

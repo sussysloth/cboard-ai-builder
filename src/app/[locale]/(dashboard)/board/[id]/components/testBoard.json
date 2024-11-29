@@ -1,0 +1,248 @@
+[
+  {
+    "isPublic": false,
+    "tiles": [
+      {
+        "label": "waa",
+        "labelKey": "",
+        "vocalization": "",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png",
+        "loadBoard": "",
+        "sound": "",
+        "type": "button",
+        "backgroundColor": "#fff176",
+        "linkedBoard": false,
+        "id": "B1PJXRcTm5tW"
+      },
+      {
+        "label": "tra",
+        "vocalization": "",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png",
+        "loadBoard": "",
+        "sound": "",
+        "type": "button",
+        "backgroundColor": "#fff176",
+        "linkedBoard": false,
+        "id": "RHor9WSmsm"
+      }
+    ],
+    "cellSize": "medium",
+    "locale": "es-ES",
+    "format": "cboard",
+    "description": "",
+    "isFixed": true,
+    "author": "Tomas",
+    "email": "tomivm98@gmail.com",
+    "caption": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png",
+    "name": "clothingAccessoriesexport",
+    "lastEdited": "2024-03-25T17:22:26-03:00",
+    "id": "65710d7d7a287c00122cdd2a",
+    "grid": {
+      "rows": 2,
+      "columns": 2,
+      "order": [
+        ["B1PJXRcTm5tW", "Syd1XRc67cFb"],
+        ["By3k7RcaXcYW", "HkTJXRc675K-"]
+      ]
+    },
+    "focusedTileId": "SkFeQCcaXqK-",
+    "hidden": false
+  },
+  {
+    "isPublic": false,
+    "tiles": [
+      {
+        "id": "b1",
+        "label": "happy",
+        "backgroundColor": "rgb(200, 200, 200)",
+        "borderColor": "rgb( 255, 0,  0) ",
+        "vocalization": "I am happy, yo",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png"
+      },
+      {
+        "id": "b2",
+        "label": "sad",
+        "backgroundColor": "rgb( 200, 200, 200) ",
+        "borderColor": "rgb(0, 0, 255)",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png"
+      },
+      {
+        "id": "b3",
+        "label": "+less",
+        "backgroundColor": "rgba(0, 0, 0, 0.1)",
+        "borderColor": "rgba(255, 0, 0, 0.2)",
+        "action": "+less",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png"
+      },
+      { "id": "b5", "label": "No way" },
+      { "id": "b4", "label": "Clear Text", "action": ":clear" }
+    ],
+    "cellSize": "medium",
+    "locale": "en",
+    "format": "cboard",
+    "description": "",
+    "isFixed": true,
+    "grid": {
+      "rows": 2,
+      "columns": 3,
+      "order": [
+        ["b1", "b2", "b3"],
+        ["b4", "b5", null]
+      ]
+    },
+    "name": "Lots of Stuff Board",
+    "email": "rodri.sanchez1998@gmail.com",
+    "author": "Rodrigo Sance",
+    "lastEdited": "2024-01-31T23:25:13.000Z",
+    "id": "65bad6d9805d53001df2302b",
+    "prevId": "lots_of_stuff",
+    "focusedTileId": "b4"
+  },
+  {
+    "isPublic": false,
+    "tiles": [
+      {
+        "label": "waa",
+        "labelKey": "",
+        "vocalization": "",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/23825/17_23826_b057d21f-027b-4e82-abeb-1f000e56b467.png",
+        "loadBoard": "",
+        "sound": "",
+        "type": "button",
+        "backgroundColor": "#fff176",
+        "linkedBoard": false,
+        "id": "-2JZGgYL_"
+      },
+      {
+        "label": "tra",
+        "vocalization": "",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png",
+        "loadBoard": "",
+        "sound": "",
+        "type": "button",
+        "backgroundColor": "#fff176",
+        "linkedBoard": false,
+        "id": "RHor9WSmsm"
+      }
+    ],
+    "cellSize": "medium",
+    "locale": "es-ES",
+    "format": "cboard",
+    "description": "",
+    "isFixed": true,
+    "author": "Tomas",
+    "email": "tomivm98@gmail.com",
+    "caption": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png",
+    "name": "clothingAccessoriesexport",
+    "lastEdited": "2024-03-25T17:22:26-03:00",
+    "id": "65710d7d7a287c00122cdd2a",
+    "grid": {
+      "rows": 2,
+      "columns": 2,
+      "order": [
+        ["-2JZGgYL_", "Syd1XRc67cFb"],
+        ["By3k7RcaXcYW", "HkTJXRc675K-"]
+      ]
+    },
+    "focusedTileId": "SkFeQCcaXqK-",
+    "hidden": false
+  },
+  {
+    "isPublic": false,
+    "tiles": [
+      {
+        "label": "waa",
+        "labelKey": "",
+        "vocalization": "",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/23825/17_23826_b057d21f-027b-4e82-abeb-1f000e56b467.png",
+        "loadBoard": "",
+        "sound": "",
+        "type": "button",
+        "backgroundColor": "#fff176",
+        "linkedBoard": false,
+        "id": "B1PJXRcTm5tW"
+      },
+      {
+        "label": "tra",
+        "vocalization": "",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png",
+        "loadBoard": "",
+        "sound": "",
+        "type": "button",
+        "backgroundColor": "#fff176",
+        "linkedBoard": false,
+        "id": "RHor9WSmsm"
+      }
+    ],
+    "cellSize": "medium",
+    "locale": "es-ES",
+    "format": "cboard",
+    "description": "",
+    "isFixed": true,
+    "author": "Tomas",
+    "email": "tomivm98@gmail.com",
+    "caption": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png",
+    "name": "clothingAccessoriesexport",
+    "lastEdited": "2024-03-25T17:22:26-03:00",
+    "id": "65710d7d7a287c00122cdd2a",
+    "grid": {
+      "rows": 2,
+      "columns": 2,
+      "order": [
+        ["fefrrg", "B1PJXRcTm5tW"],
+        ["By3k7RcaXcYW", "HkTJXRc675K-"]
+      ]
+    },
+    "focusedTileId": "SkFeQCcaXqK-",
+    "hidden": false
+  },
+  {
+    "isPublic": false,
+    "tiles": [
+      {
+        "label": "waa",
+        "labelKey": "",
+        "vocalization": "",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/23304/17_23305_b0ccd369-be8f-4ca4-b8b3-cf72c81cf8cc.png",
+        "loadBoard": "",
+        "sound": "",
+        "type": "button",
+        "backgroundColor": "#fff176",
+        "linkedBoard": false,
+        "id": "B1PJXRcTm5tW"
+      },
+      {
+        "label": "tra",
+        "vocalization": "",
+        "image": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png",
+        "loadBoard": "",
+        "sound": "",
+        "type": "button",
+        "backgroundColor": "#fff176",
+        "linkedBoard": false,
+        "id": "RHor9WSmsm"
+      }
+    ],
+    "cellSize": "medium",
+    "locale": "es-ES",
+    "format": "cboard",
+    "description": "",
+    "isFixed": true,
+    "author": "Tomas",
+    "email": "tomivm98@gmail.com",
+    "caption": "https://globalsymbols.com/uploads/production/image/imagefile/14535/17_14536_88b4dc3e-fd8b-45e3-8133-ea15893a67b4.png",
+    "name": "clothingAccessoriesexport",
+    "lastEdited": "2024-03-25T17:22:26-03:00",
+    "id": "65710d7d7a287c00122cdd2a",
+    "grid": {
+      "rows": 2,
+      "columns": 2,
+      "order": [
+        ["fefrrg", "B1PJXRcTm5tW"],
+        ["By3k7RcaXcYW", "HkTJXRc675K-"]
+      ]
+    },
+    "focusedTileId": "SkFeQCcaXqK-",
+    "hidden": false
+  }
+]
