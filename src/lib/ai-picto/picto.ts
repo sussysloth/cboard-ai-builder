@@ -9,7 +9,22 @@ import { getErrorMessage } from '../../common/common';
 async function delay(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
 export async function createAIPicto(desc: string) {
+  const myHeaders = new Headers();
+  myHeaders.append('Content-Type', 'application/json');
+
+  // Get the AI-generated prompt first
+  const promptResponse = await fetch('/api/leonardo/generate-prompt', {
+    method: 'POST',
+    headers: myHeaders,
+    body: JSON.stringify({ word: desc }),
+    cache: 'no-store',
+  });
+
+  const { prompt } = await promptResponse.json();
+  console.log('Generated prompt:', prompt);
+
   let imgDone: boolean = false;
   let tries: number = 0;
 
@@ -29,50 +44,10 @@ export async function createAIPicto(desc: string) {
     generations_by_pk: messageData,
   };
 
-  const myHeaders = new Headers();
-  myHeaders.append('Content-Type', 'application/json');
-
-  let description;
-
-  try {
-    description = desc;
-    const detectBody: string = JSON.stringify({
-      description: desc,
-    });
-    const language = await fetch('/api/azure-services/detect-language', {
-      method: 'POST',
-      headers: myHeaders,
-      body: detectBody,
-      redirect: 'follow',
-      cache: 'no-store',
-    });
-    const detectedLang = await language.json();
-    if (
-      detectedLang.language !== 'en' &&
-      typeof detectedLang.language === 'string'
-    ) {
-      const translateBody: string = JSON.stringify({
-        description: desc,
-        from: detectedLang.language,
-      });
-      const translation = await fetch('/api/azure-services/translate', {
-        method: 'POST',
-        headers: myHeaders,
-        body: translateBody,
-        redirect: 'follow',
-        cache: 'no-store',
-      });
-      const translationData = await translation.json();
-      description = translationData.translation;
-    }
-  } catch (error) {
-    console.error(getErrorMessage(error));
-  }
-
   try {
     // Imagine image
     const imagineBody: string = JSON.stringify({
-      description: description,
+      description: prompt,
     });
     const response = await fetch('/api/leonardo/generations', {
       method: 'POST',
