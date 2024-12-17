@@ -37,7 +37,6 @@ export async function POST(req: Request) {
     prompt = await boardGenerator.generateAPromptForLeonardo({
       word: description,
     });
-    console.log(prompt);
 
     prompt = JSON.stringify(prompt);
   } catch (error) {

@@ -73,7 +73,7 @@ export async function createAIPicto(desc: string) {
   try {
     // Imagine image
     const imagineBody: string = JSON.stringify({
-      description: prompt,
+      description: description,
     });
     const response = await fetch('/api/leonardo/generations', {
       method: 'POST',
