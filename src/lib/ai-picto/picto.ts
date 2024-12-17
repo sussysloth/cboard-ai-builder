@@ -70,21 +70,10 @@ export async function createAIPicto(desc: string) {
     console.error(getErrorMessage(error));
   }
 
-  // Get the AI-generated prompt first
-  // const promptResponse = await fetch('/api/leonardo/generate-prompt', {
-  //   method: 'POST',
-  //   headers: myHeaders,
-  //   body: JSON.stringify({ word: description }),
-  //   cache: 'no-store',
-  // });
-
-  // const { prompt } = await promptResponse.json();
-  // console.log('Generated prompt:', prompt);
-
   try {
     // Imagine image
     const imagineBody: string = JSON.stringify({
-      description: description,
+      description: prompt,
     });
     const response = await fetch('/api/leonardo/generations', {
       method: 'POST',
