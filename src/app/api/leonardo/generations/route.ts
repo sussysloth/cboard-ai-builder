@@ -14,12 +14,11 @@ export async function POST(req: Request) {
   const apiKey = process.env.AZURE_OPENAI_API_KEY;
   const openAIConfiguration = {
     apiKey,
-    basePath:
-      'https://cboard-openai.openai.azure.com/openai/deployments/ToEdit-01',
+    basePath: process.env.OPENAI_BASE_PATH,
     baseOptions: {
       headers: { 'api-key': apiKey },
       params: {
-        'api-version': '2022-12-01',
+        'api-version': process.env.OPENAI_API_VERSION,
       },
     },
   };
@@ -38,6 +37,7 @@ export async function POST(req: Request) {
     prompt = await boardGenerator.generateAPromptForLeonardo({
       word: description,
     });
+    console.log(prompt);
 
     prompt = JSON.stringify(prompt);
   } catch (error) {
@@ -47,6 +47,7 @@ export async function POST(req: Request) {
       { status: 500 },
     );
   }
+  console.log('Prompt:', prompt);
   if (!prompt)
     return new Response('Error generating AI Prompt', { status: 500 });
 

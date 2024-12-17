@@ -23,12 +23,11 @@ const promptFormDataSchema = z.object({
 
 const openAIConfiguration = {
   apiKey,
-  basePath:
-    'https://cboard-openai.openai.azure.com/openai/deployments/ToEdit-01',
+  basePath: process.env.OPENAI_BASE_PATH,
   baseOptions: {
     headers: { 'api-key': apiKey },
     params: {
-      'api-version': '2022-12-01',
+      'api-version': process.env.OPENAI_API_VERSION,
     },
   },
 };
@@ -42,7 +41,6 @@ const boardGenerator = initEngine({
   openAIConfiguration,
   contentSafetyConfiguration,
 });
-
 export async function submit(
   prevState: {
     error?: { message: string };
@@ -93,13 +91,13 @@ export async function submit(
       }
 
       const numberOfTiles = rows * columns;
-
       const suggestions = await boardGenerator.getSuggestions({
         prompt: prompt,
         maxSuggestions: numberOfTiles,
         symbolSet: 'arasaac',
         language: locale,
       });
+      console.log('suggestions', suggestions);
 
       if (!suggestions.length) {
         throw new Error('No suggestions found');
